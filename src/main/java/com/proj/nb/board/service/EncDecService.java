@@ -32,7 +32,7 @@ public class EncDecService {
 		}
 		
 		
-		//String
+		
 		public static String decryptText(byte[] byteCipherText, SecretKey secKey)throws Exception{
 			Cipher aesCipher = Cipher.getInstance("AES");
 			aesCipher.init(Cipher.DECRYPT_MODE, secKey);
