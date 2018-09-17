@@ -55,7 +55,7 @@ public class UserServiceImpl implements UserService{
 	
 	public void deleteTupleByName(String name){
 		
-		tr.deleteByName(name);//crazy spring nik ye mhtod kavalo aaa method ni cameCase lo rasi dengthe adhe chuskutnadi CRUD operations motham
+		tr.deleteByName(name);
 	}
 
 	public void deleteAllTuples() {
@@ -67,12 +67,12 @@ public class UserServiceImpl implements UserService{
 		// TODO Auto-generated method stub
 		
 		return tr.findAll();
-	//	return null;
+	
 	}
 
 	public boolean isTupleExist(TemporaryAdmin user) {
 		// TODO Auto-generated method stub
-	//	return false;
+	
 		
 	return findByName(user.getName())!=null;
 		
