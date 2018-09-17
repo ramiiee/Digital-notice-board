@@ -36,10 +36,7 @@ EncDecService encdec;
 		
 		
 		try {
-		   /* SecretKey secKey;
-			secKey = encdec.getSecretEncryptionKey();
-			*/
-			byte[] pass=encdec.encryptText(password, seckey);
+		  	byte[] pass=encdec.encryptText(password, seckey);
 			
 			
 			byte[] passenc = lr.findByUsername(username).getEncpassword();
@@ -60,13 +57,8 @@ EncDecService encdec;
 		//	if(password.equals(newpass)){System.out.println("found the error");return true;}
 			if(pass.equals(passenc)){System.out.println("thank god3");return true;}
 			if(Arrays.equals(pass,passenc))return true;
-		//	if(Arrays.deepEquals(pass, passenc))return true;
+		
 			
-		//	 byte[] decryptedText = encdec.decryptText(passenc, secKey);
-			 /*
-			 if(decryptedText.equals(password)){
-				 return true;
-			 }*/
 			 return false;
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
@@ -78,15 +70,7 @@ EncDecService encdec;
 		
 		 
 		 
-		/*
-		//== ani pedthe same object aaa kadha from memory nundi check chesidanta adhe compare chesdunte equals() use cheyalanta
-		if(lr.findByUsername(username).getPassword().equals(password)){
-			
-			return true;
-		}
-		return false;
 		
-	}*/
 	}
 	
 	
